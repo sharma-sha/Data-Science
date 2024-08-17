@@ -38,6 +38,10 @@ class Univariate():
                 descriptive[column_name]["Greater"]=descriptive[column_name]["Q3:75%"]+descriptive[column_name]["1.5rule"]
                 descriptive[column_name]["Min"]=dataset[column_name].min()
                 descriptive[column_name]["Max"]=dataset[column_name].max()
+                descriptive[column_name]["kurtosis"]=dataset[columnName].kurtosis()
+                descriptive[column_name]["skew"]=dataset[columnName].skew()
+                descriptive[column_name]["var"]=dataset[columnName].var()
+                descriptive[column_name]["std"]=dataset[columnName].std()
             return descriptive  
             
         def ReplaceOtlier():
